@@ -1,0 +1,31 @@
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
+.cursor {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  contain: layout style size;
+  pointer-events: none;
+  &:before {
+    content: '';
+    position: absolute;
+    top: -24px;
+    left: -24px;
+    display: block;
+    width: 48px;
+    height: 48px;
+    transform: scale(0.2);
+    background: white;
+    border-radius: 50%;
+  }
+  .cursor-media {
+    display: block;
+    height: 350px;
+    width: 350px;
+    overflow: hidden;
+    transform: scale(0);
+    margin: -175px 0 0 -175px;
+    position: relative;
+  }
+}

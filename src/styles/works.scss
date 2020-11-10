@@ -1,0 +1,36 @@
+.workSection {
+  margin-top: 250px;
+  .line {
+    margin-left: 50px;
+    margin-bottom: 10px;
+    width: 770px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+  }
+  .title {
+    font-size: 50px;
+    font-weight: 400;
+    margin-left: 600px;
+  }
+  .project {
+    margin-top: 170px;
+    margin-left: 30vw;
+    width: fit-content;
+    text-align: center;
+    &-title {
+      font-size: 60px;
+      font-weight: 500;
+    }
+    &skills {
+      margin-top: 10px;
+      overflow: hidden;
+    }
+  }
+  .right {
+    margin-left: 45vw;
+  }
+}

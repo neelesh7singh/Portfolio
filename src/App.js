@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useRef, useEffect } from 'react';
+import Cursor from './cursor';
+import './styles/App.scss';
+import Banner from './components/banner.jsx'
+import Intro from './components/intro.jsx';
+import Works from './components/works.jsx';
 
 function App() {
+  let c = useRef(null);
+  useEffect(() => {
+    new Cursor(c);
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="cursor" ref={(el) => (c = el)} />
+      <Banner />
+      <Intro />
+      <Works />
     </div>
   );
 }
