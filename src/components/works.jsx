@@ -17,22 +17,24 @@ function Works() {
                 </p>
             </div>
             <div className = 'project right'>
-                <h2 className = 'project-title'>Pathfinding Visualizer</h2>
+                <h2 className = 'project-title'>Flappy Bird AI</h2>
                 <p className = 'project-skills'>
                     HTML &nbsp;&nbsp;&nbsp; 
                     CSS &nbsp;&nbsp;&nbsp; 
                     JAVASCRIPT &nbsp;&nbsp;&nbsp; 
-                    JQUERY &nbsp;&nbsp;&nbsp; 
-                    PATHFINDING ALGORITHMS
+                    p5.js &nbsp;&nbsp;&nbsp; 
+                    NEURAL NETWORK &nbsp;&nbsp;&nbsp; 
+                    GENETIC ALGORITHMS
                 </p>
             </div><div className = 'project'>
-                <h2 className = 'project-title'>Pathfinding Visualizer</h2>
+                <h2 className = 'project-title'>2D Self-Driving Car</h2>
                 <p className = 'project-skills'>
                     HTML &nbsp;&nbsp;&nbsp; 
                     CSS &nbsp;&nbsp;&nbsp; 
                     JAVASCRIPT &nbsp;&nbsp;&nbsp; 
-                    JQUERY &nbsp;&nbsp;&nbsp; 
-                    PATHFINDING ALGORITHMS
+                    p5.js &nbsp;&nbsp;&nbsp; 
+                    TENSORFLOW.js &nbsp;&nbsp;&nbsp; 
+                    GENETIC ALGORITHMS
                 </p>
             </div>
         </div>
