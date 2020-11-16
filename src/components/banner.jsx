@@ -1,16 +1,41 @@
-import React from 'react'
+import React, {useRef, useEffect} from 'react'
+import { TweenMax, Power3 } from "gsap";
 import '../styles/banner.scss'
 
+
 const Banner = () => {
+    let h = useRef(null);
+    let i = useRef(null);
+    let portfolio = useRef(null);
+    let line = useRef(null);
+    let loader = useRef(null);
+    useEffect(() => {
+        TweenMax.from(portfolio, 1, {y: -100, opacity: 0, ease: Power3.easeOut, delay:2.5});
+        TweenMax.from(line, 2, {x: '-100%'});
+        TweenMax.to(loader, 1, {opacity: 0, display: 'none', delay:2});
+        TweenMax.to(line, 1, {opacity: 0, display: 'none', delay:2});
+        TweenMax.staggerFrom(
+            [h, i],
+            0.8,
+            { opacity: 0, y: 400, ease: Power3.easeOut, delay:2.5},
+            0.07
+          );
+    },[])
     return (
+        <>
+        <div className = 'loader' ref = {(el) => (loader = el)}>
+            <div className="line" ref = {(el) => (line = el)}/>
+        </div>
         <div className = 'banner'>
-        <div className = "top-bar">
-            <p>Portfolio.</p>
+        <div className = "top-bar" ref = {(el) => (portfolio = el)}>
+            <p >Portfolio.</p>
         </div>
         <div className = "hi">
-            <h1>HI</h1>
+            <h1 ref={(el) => (h = el)}>H</h1>
+            <h1 ref={(el) => (i = el)}>I</h1>
         </div>
         </div>
+        </>
     )
 }
 

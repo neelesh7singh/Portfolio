@@ -1,3 +1,23 @@
+.loader {
+  background-color: #2d513e;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  .line {
+    width: 100vw;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+  }
+}
 .top-bar {
   padding: 15px;
   padding-left: 20px;
@@ -5,8 +25,9 @@
   margin-bottom: 7%;
 }
 .hi {
+  overflow: hidden;
   h1 {
-    // display: inline-block;
+    display: inline-block;
     // align-self: flex-end;
     line-height: 720px;
     font-size: 720px;
