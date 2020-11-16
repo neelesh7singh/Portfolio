@@ -4,6 +4,10 @@ import './styles/App.scss';
 import Banner from './components/banner.jsx'
 import Intro from './components/intro.jsx';
 import Works from './components/works.jsx';
+import Skill from './components/skill.jsx';
+import Contact from './components/contact.jsx';
+
+
 
 function App() {
   let c = useRef(null);
@@ -17,6 +21,8 @@ function App() {
       <Banner />
       <Intro />
       <Works />
+      <Skill />
+      <Contact />
     </div>
   );
 }
