@@ -1,12 +1,17 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 import '../styles/contact.scss'
 
 function Contact() {
+    useEffect(() => {
+        Aos.init({duration:1000});
+    },[])
     return (
         <div className = 'contact-section'>
-            <div className = 'line'/>
-            <h3 className= 'title'>Contact Me</h3>
-            <div className = 'contact-svg'>
+            <div data-aos='fade-up' className = 'line'/>
+            <h3 data-aos='fade-up' className= 'title'>Contact Me</h3>
+            <div data-aos='fade' className = 'contact-svg'>
                 {/* gmail */}
                 <a  href="mailto:neeleshsingh767@gmail.com">
                     <svg width="100" height="100" viewBox="0 0 133 148" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,5 +1,5 @@
 import React, {useRef, useEffect} from 'react'
-import { TweenMax, Power3 } from "gsap";
+import { TweenMax } from "gsap";
 import '../styles/banner.scss'
 
 
@@ -10,14 +10,14 @@ const Banner = () => {
     let line = useRef(null);
     let loader = useRef(null);
     useEffect(() => {
-        TweenMax.from(portfolio, 1, {y: -100, opacity: 0, ease: Power3.easeOut, delay:2.5});
+        TweenMax.from(portfolio, 1.5, {y: -100, opacity: 0, ease: "power4.out", delay:2.5});
         TweenMax.from(line, 2, {x: '-100%'});
         TweenMax.to(loader, 1, {opacity: 0, display: 'none', delay:2});
         TweenMax.to(line, 1, {opacity: 0, display: 'none', delay:2});
         TweenMax.staggerFrom(
             [h, i],
-            0.8,
-            { opacity: 0, y: 400, ease: Power3.easeOut, delay:2.5},
+            1,
+            { opacity: 0, y: 400, ease: "power4.out", delay:2.5},
             0.07
           );
     },[])

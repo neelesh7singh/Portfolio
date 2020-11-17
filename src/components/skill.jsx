@@ -1,17 +1,22 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 import '../styles/skill.scss'
 
 function Skill() {
+    useEffect(() => {
+        Aos.init({duration:1000});
+    },[])
     return (
         <div className = 'skillSection'>
-            <div className = 'line-right'/>
-            <h3 className= 'title'>SKILLS</h3>
-            <div className = 'skill-about'>
+            <div data-aos='fade-up' className = 'line-right'/>
+            <h3 data-aos='fade-up' className= 'title'>SKILLS</h3>
+            <div data-aos='fade-up' className = 'skill-about'>
                 <p>
                 I’m a full stack developer with knowledge in different technologies. If I don’t know something I always try to wrap my head around quickly.
                 </p>
             </div>
-            <div className = 'skill-svg'>
+            <div data-aos='fade-up' className = 'skill-svg'>
             {/* c++ */}
             <svg width="105" height="118" viewBox="0 0 105 118" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0)">
