@@ -13,7 +13,8 @@ body {
   font-family: 'Noto Sans KR', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(#39684f, #2d513e);
+  /* background: linear-gradient(#39684f, #2d513e); */
+  background-color: #000;
 }
 
 code {

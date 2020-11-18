@@ -6,6 +6,7 @@ import Intro from './components/intro.jsx';
 import Works from './components/works.jsx';
 import Skill from './components/skill.jsx';
 import Contact from './components/contact.jsx';
+import Preloader from './components/preloader.jsx';
 import useWindowSize from './useWindowSize.js';
 import Particles from 'react-particles-js';
 
@@ -173,6 +174,7 @@ function App() {
           },
           "retina_detect": true
         }} />
+      <Preloader />
       <div className="cursor" ref={(el) => (c = el)} />
       <div ref={scrollContainer} className="scroll">
         <Banner />

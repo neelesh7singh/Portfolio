@@ -1,25 +1,25 @@
-.loader {
-  background-color: #2d513e;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 99;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  overflow: hidden;
-  .line {
-    width: 100vw;
-    border-width: 2px;
-    border-style: solid;
-    border-color: white;
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
-  }
-}
+// .loader {
+//   background-color: #2d513e;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   z-index: 99;
+//   display: flex;
+//   justify-content: center;
+//   flex-direction: column;
+//   overflow: hidden;
+//   .line {
+//     width: 100vw;
+//     border-width: 2px;
+//     border-style: solid;
+//     border-color: white;
+//     border-left: none;
+//     border-right: none;
+//     border-bottom: none;
+//   }
+// }
 .top-bar {
   padding: 15px;
   padding-left: 20px;

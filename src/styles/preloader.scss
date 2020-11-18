@@ -1,0 +1,24 @@
+.loader {
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  .line {
+    width: 100vw;
+    height: 1px;
+    background: white;
+  }
+  .line-black {
+    width: 100vw;
+    height: 0px;
+    background: #000;
+  }
+}
