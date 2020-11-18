@@ -22,3 +22,14 @@
     margin-bottom: 70px;
   }
 }
+.extra {
+  height: 190px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  p {
+    margin-left: 50vw;
+    transform: translateX(-50%);
+    font-size: 20px;
+  }
+}
