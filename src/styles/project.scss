@@ -1,0 +1,30 @@
+.heading {
+  margin-top: 20vh;
+  margin-bottom: 70px;
+  text-align: center;
+  h1 {
+    font-size: 150px;
+    font-weight: 400;
+  }
+}
+
+.about {
+  width: 70vw;
+  margin-left: 15vw;
+  font-size: 25px;
+  text-align: center;
+  .svgs {
+    margin-top: 70px;
+    display: flex;
+    padding: 0 250px;
+    justify-content: space-between;
+    .items {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
