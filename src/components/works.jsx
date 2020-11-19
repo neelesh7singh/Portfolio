@@ -12,7 +12,7 @@ function Works() {
         <div className= 'workSection'>
             <div data-aos='fade-up' className= 'line'></div>
             <h3 data-aos='fade-up' className= 'title'>MY WORK</h3>
-            <Link to='/project1' rel="noopener noreferrer" target="_blank">
+            <Link to='/project1'>
             <div data-aos='fade-up-right' className = 'project'>
                 <h2 className = 'project-title'>Pathfinding Visualizer</h2>
                 <p className = 'project-skills scroll'>
@@ -24,7 +24,7 @@ function Works() {
                 </p>
             </div>
             </Link>
-            <Link to='/project2' rel="noopener noreferrer" target="_blank">
+            <Link to='/project2'>
                 <div data-aos='fade-up-left' className = 'project right'>
                     <h2 className = 'project-title'>Flappy Bird AI</h2>
                     <p className = 'project-skills scroll'>
@@ -37,7 +37,7 @@ function Works() {
                     </p>
                 </div>
             </Link>
-            <Link to='/project3' rel="noopener noreferrer" target="_blank">
+            <Link to='/project3'>
                 <div data-aos='fade-up-right' className = 'project'>
                     <h2 className = 'project-title'>2D Self-Driving Car</h2>
                     <p className = 'project-skills scroll'>
@@ -55,3 +55,4 @@ function Works() {
 }
 
 export default Works
+// rel="noopener noreferrer" target="_blank"
