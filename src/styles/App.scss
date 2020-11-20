@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
+@import './breakpoints.scss';
+
 .cursor {
   position: fixed;
   top: 0px;
@@ -29,6 +31,7 @@
   }
 }
 
+// for skew scrolling
 // .App {
 //   position: fixed;
 //   top: 0;

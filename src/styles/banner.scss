@@ -1,8 +1,12 @@
+@import './breakpoints.scss';
 .top-bar {
   padding: 15px;
   padding-left: 20px;
   font-size: 20px;
   margin-bottom: 7%;
+  @include media('<800px') {
+    margin-bottom: 7%;
+  }
 }
 .hi {
   overflow: hidden;
@@ -11,5 +15,12 @@
     line-height: 720px;
     font-size: 720px;
     font-weight: 400;
+    @include media('<1500px') {
+      font-size: 600px;
+    }
+    @include media('<800px') {
+      line-height: 300px;
+      font-size: 300px;
+    }
   }
 }
