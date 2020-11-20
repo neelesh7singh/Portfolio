@@ -1,5 +1,5 @@
 import React, {useEffect, useRef} from 'react'
-import SkewScrolling from '../components/skewScrolling.jsx'
+// import SkewScrolling from '../components/skewScrolling.jsx'
 import { TweenMax } from "gsap";
 import {Link} from 'react-router-dom'
 import Cursor from '../cursor';
@@ -18,7 +18,7 @@ function Project({heading, about, code, website}) {
       <div className="whiteDiv" ref={(el) => {whiteDiv = el}}/>
       <div className="App">
           <div className="cursor" ref={(el) => (c = el)} />
-          <SkewScrolling>
+          {/* <SkewScrolling> */}
           <Link to='/'>
             <div className="backButton">
               <svg width="85" height="85" viewBox="0 0 85 85" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -65,7 +65,7 @@ function Project({heading, about, code, website}) {
             </div>
 
 
-          </SkewScrolling>
+          {/* </SkewScrolling> */}
       </div>
     </>
     )

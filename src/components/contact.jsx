@@ -33,7 +33,6 @@ function Contact() {
                     </a>
                 </div>
             </div>
-            <div className="extra"><p>End</p></div>
         </>
     )
 }

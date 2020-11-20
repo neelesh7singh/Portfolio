@@ -5,7 +5,7 @@ import Works from '../components/works.jsx';
 import Skill from '../components/skill.jsx';
 import Contact from '../components/contact.jsx';
 import Preloader from '../components/preloader.jsx';
-import SkewScrolling from '../components/skewScrolling.jsx';
+// import SkewScrolling from '../components/skewScrolling.jsx';
 import Cursor from '../cursor';
 function HomePage(props) {
   let c = useRef(null);
@@ -20,13 +20,13 @@ function HomePage(props) {
     <Preloader />
     <div ref={app} className="App">
       <div className="cursor" ref={(el) => (c = el)} />
-      <SkewScrolling>
+      {/* <SkewScrolling> */}
         <Banner />
         <Intro />
         <Works {...props}/>
         <Skill />
         <Contact />
-      </SkewScrolling>
+      {/* </SkewScrolling> */}
     </div>
     </>
     )
