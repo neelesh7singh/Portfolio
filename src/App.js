@@ -20,7 +20,7 @@ function App() {
   }
   const project3 = {
     heading: '2D Self-Driving Car',
-    about: '',
+    about: 'I used TensorFlow.js to train 2d cars move on a track without touching the edges. The car can get the information about the track using raycasting and the tracks are generated automatically using perlin noise.',
     code: 'https://github.com/neelesh7singh/2d-AI-cars',
     website: 'https://neelesh7singh.github.io/2d-AI-cars/'
   }

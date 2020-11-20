@@ -1,3 +1,12 @@
+.exitdiv {
+  position: fixed;
+  height: 1000vh;
+  width: 0px;
+  top: 0px;
+  left: 0px;
+  background-color: #fff;
+  // display: none;
+}
 .workSection {
   margin-top: 250px;
   padding-bottom: 200px;
@@ -23,6 +32,7 @@
     width: fit-content;
     text-align: center;
     &-title {
+      cursor: pointer;
       font-size: 60px;
       font-weight: 500;
     }

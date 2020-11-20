@@ -8,11 +8,11 @@ const Banner = () => {
     let i = useRef(null);
     let portfolio = useRef(null);
     useEffect(() => {
-        TweenMax.from(portfolio, 1.5, {y: -100, opacity: 0, ease: "power4.out", delay:3.4});
+        TweenMax.from(portfolio, 1.5, {y: -100, opacity: 0, ease: "power4.out", delay:2.2});
         TweenMax.staggerFrom(
             [h, i],
             1,
-            { opacity: 0, y: 400, ease: "power4.out", delay:3.4},
+            { opacity: 0, y: 400, ease: "power4.out", delay:2.2},
             0.07
           );
     },[])

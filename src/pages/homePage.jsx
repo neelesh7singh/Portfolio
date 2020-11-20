@@ -7,26 +7,28 @@ import Contact from '../components/contact.jsx';
 import Preloader from '../components/preloader.jsx';
 import SkewScrolling from '../components/skewScrolling.jsx';
 import Cursor from '../cursor';
-function HomePage() {
+function HomePage(props) {
   let c = useRef(null);
   const app = useRef(null);
-
+  // console.log(prop);
   useEffect(() => {
     new Cursor(c);
   }, [])
 
     return (
+    <>
+    <Preloader />
     <div ref={app} className="App">
-      <Preloader />
       <div className="cursor" ref={(el) => (c = el)} />
       <SkewScrolling>
         <Banner />
         <Intro />
-        <Works />
+        <Works {...props}/>
         <Skill />
         <Contact />
       </SkewScrolling>
     </div>
+    </>
     )
 }
 
