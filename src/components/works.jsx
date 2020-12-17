@@ -49,7 +49,7 @@ function Works(props) {
                     </p>
                     </div>
                     <div data-aos='fade-up-right' className = 'project'>
-                    <h2 className = 'project-title' onClick={() => handleClick('project2')}>2D Self-Driving Car</h2>
+                    <h2 className = 'project-title' onClick={() => handleClick('project3')}>2D Self-Driving Car</h2>
                     <p className = 'project-skills scroll'>
                         HTML &nbsp;&nbsp;&nbsp; 
                         CSS &nbsp;&nbsp;&nbsp; 
