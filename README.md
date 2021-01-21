@@ -1,3 +1,3 @@
 # portfolio
 
-https://neelesh7singh.github.io/Portfolio/
+https://neelesh7singh.github.io/portfolio/
