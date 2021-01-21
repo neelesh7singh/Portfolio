@@ -1,0 +1,799 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+  outline: none;
+}
+
+body,
+html {
+  width: 100vw;
+  height: 100vh;
+  background-attachment: fixed;
+  background-color: #121212;
+  scroll-behavior: smooth;
+  position: relative;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #121212;
+
+  .title-lines {
+    opacity: 0;
+    display: none;
+  }
+
+  main {
+    height: 100vh;
+    width: 100vw;
+    background-color: #121212;
+
+    .loading {
+      height: 100%;
+      width: 100%;
+      background-color: #121212;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      #progress-bar {
+        position: absolute;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.575);
+        height: 2px;
+        transition: 0.4s ease-out;
+      }
+
+      #count {
+        position: absolute;
+        font-size: 130px;
+        font-family: 'Cormorant Garamond';
+        color: rgba(255, 255, 255, 0.94);
+        // opacity: 0;
+        transform: translateY(-15px);
+        font-weight: lighter;
+      }
+
+      .follow {
+        position: absolute;
+        background-color: peachpuff;
+        height: 2px;
+        width: 0;
+        left: 0;
+        z-index: 2;
+      }
+    }
+    .content {
+      height: 100%;
+      // width: 100%;
+      width: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #121212;
+      font-weight: 300;
+      border: none;
+      z-index: 5;
+
+      #scroll {
+        position: absolute;
+        right: 5%;
+        bottom: 4%;
+        opacity: 0;
+        font-family: 'Libre Barcode 39 Extended Text', cursive;
+        color: pink;
+        font-size: 37px;
+      }
+
+      nav {
+        position: fixed;
+        top: 5%;
+        left: 2%;
+        z-index: 5;
+        width: 35%;
+
+        ul {
+          canvas {
+            display: block;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+          li {
+            list-style: none;
+            opacity: 0;
+          }
+        }
+      }
+
+      section {
+        height: 82.5%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p {
+          color: white;
+          font-size: 9.9vw;
+          margin-bottom: -6.5vw;
+          padding: 0% 5%;
+          letter-spacing: 2px;
+          &:nth-of-type(1) {
+            text-align: end;
+          }
+          &:nth-of-type(3) {
+            text-align: center;
+          }
+
+          span {
+            font-family: 'Major Mono Display', monospace;
+            color: rgb(150, 149, 149);
+            font-size: 12vw;
+          }
+        }
+      }
+    }
+  }
+
+  #para {
+    background-color: #121212;
+    color: white;
+    margin: 10vw 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s ease-out;
+    will-change: transform;
+
+    h2 {
+      font-size: 8.5vw;
+      width: 80%;
+      small {
+        font-size: 8.5vw;
+      }
+    }
+
+    h1 {
+      font-size: 9.7vw;
+      width: 80%;
+      color: pink;
+      font-weight: bolder;
+      font-family: 'raleway';
+      &:nth-of-type(2) {
+        color: white;
+      }
+    }
+    small {
+      font-family: 'Major Mono Display', monospace;
+      font-size: 3vw;
+    }
+
+    p {
+      width: 80%;
+      font-size: 5vw;
+
+      span {
+        font-style: italic;
+        text-decoration: line-through;
+        // color: rgb(165, 165, 165);
+        color: lightsalmon;
+      }
+    }
+    &:nth-of-type(7) {
+      margin-bottom: 22vw;
+    }
+  }
+
+  .text-slider {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100vw;
+    border-bottom: 1px rgb(94, 94, 94) solid;
+    border-top: 1px rgb(94, 94, 94) solid;
+    margin-bottom: -6vw;
+
+    span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 90s linear infinite;
+      -webkit-text-stroke: 1px rgb(190, 190, 190);
+      font-size: 160px;
+      -webkit-text-fill-color: #121212;
+      font-family: raleway;
+      will-change: transform;
+
+      &:hover {
+        -webkit-text-stroke: 1px lightsalmon;
+        -webkit-text-fill-color: lightsalmon;
+        font-style: italic;
+        text-decoration: line-through;
+      }
+    }
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-100%, 0);
+    }
+  }
+
+  .honne-container,
+  .fin-container,
+  .pac-container,
+  .kap-container,
+  .trek-container {
+    transition: 0.3s ease-out;
+    will-change: transform;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 15vw 0;
+    font-family: 'raleway';
+
+    img {
+      display: none;
+      position: relative;
+    }
+
+    #proj-text {
+      width: 35%;
+      h1 {
+        z-index: 1;
+        font-size: 8.9vmax;
+        font-family: 'poiret one';
+        color: white;
+      }
+
+      ion-icon {
+        color: pink;
+        font-size: 30px;
+        margin: -0.4vw 1vw 0 0;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        color: pink;
+      }
+      p {
+        text-align: justify;
+        color: white;
+        font-size: 17px;
+      }
+      small {
+        font-size: 18.5px;
+        color: pink;
+      }
+      ul {
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        li {
+          color: white;
+          font-size: 17px;
+          list-style: initial;
+        }
+      }
+    }
+
+    #honne-image {
+      position: relative;
+      width: 280px;
+      height: 630px;
+      position: relative;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      p {
+        position: absolute;
+        bottom: -35px;
+        right: 15px;
+        color: rgb(235, 232, 232);
+      }
+
+      canvas {
+        border-radius: 30px;
+        filter: brightness(85%);
+        box-shadow: 1.2px 1.2px 4px rgb(56, 56, 56);
+      }
+      &::after {
+        content: 'PRJ WRK 002';
+        display: block;
+        transform: rotate(-90deg);
+        color: rgb(235, 232, 232);
+        position: absolute;
+        left: -27.5%;
+        bottom: 10%;
+      }
+    }
+  }
+
+  .honne-container {
+    #proj-text {
+      transform: translateY(-3.8%);
+    }
+  }
+
+  .fin-container,
+  .kap-container,
+  .trek-container {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    padding-right: 5%;
+    position: relative;
+
+    .arrow {
+      width: 6vw;
+      height: 1.7px;
+      background: white;
+      transform: rotate(90deg);
+      position: absolute;
+      right: 13.35vw;
+      top: 24vw;
+      &::after {
+        content: '';
+        display: block;
+        width: 3vmax;
+        height: 1.7px;
+        background-color: white;
+        position: absolute;
+        right: -5px;
+        top: -1vw;
+        transform: rotate(40deg);
+      }
+      &::before {
+        content: '';
+        display: block;
+        width: 3vmax;
+        height: 1.7px;
+        background-color: white;
+        position: absolute;
+        right: -5px;
+        bottom: -1vw;
+        transform: rotate(-42deg);
+      }
+    }
+
+    #circle-1 {
+      stroke-dasharray: 1300;
+      stroke-dashoffset: 1300;
+      animation: dash 2s linear forwards;
+      fill: transparent;
+      stroke: white;
+      position: absolute;
+      right: 5vw;
+      top: 13vw;
+    }
+
+    @keyframes dash {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    #proj-text {
+      width: 72%;
+      text-align: start;
+      transform: translateX(-19%);
+      margin-bottom: 5vw;
+      p {
+        width: 70%;
+      }
+      h1 {
+        margin-left: -1%;
+        font-family: 'Montserrat';
+      }
+      ul {
+        width: 50%;
+      }
+    }
+
+    #fin-image,
+    #kap-image,
+    #trek-image {
+      width: 60vw;
+      height: 30vw;
+      position: relative;
+      margin-bottom: 5vw;
+      p {
+        position: absolute;
+        bottom: -30px;
+        right: 10px;
+        color: rgb(235, 232, 232);
+      }
+      &::after {
+        content: 'PRJ WRK 004';
+        display: block;
+        color: rgb(235, 232, 232);
+        position: absolute;
+        left: 1%;
+        top: -32px;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    #fin-image {
+      box-shadow: 0.5px 0.5px 4px rgb(7, 7, 7);
+    }
+  }
+
+  .trek-container {
+    #proj-text {
+      h1 {
+        font-family: raleway;
+      }
+    }
+
+    #trek-image {
+      box-shadow: 1.3px 1.3px 6px rgb(0, 0, 0);
+      // clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+      &::after {
+        content: 'PRJ WRK 001';
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .kap-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 5%;
+    position: relative;
+    .arrow {
+      transform: rotate(120deg);
+    }
+    #proj-text {
+      width: 58%;
+      text-align: start;
+      transform: translateX(-7%);
+      margin-bottom: -6vw;
+      h1 {
+        margin-left: -2%;
+      }
+      align-self: flex-end;
+      p {
+        width: 100%;
+      }
+      ul {
+        width: 75%;
+      }
+    }
+    #kap-image {
+      box-shadow: 1.3px 1.3px 6px rgb(0, 0, 0);
+      &::after {
+        content: 'PRJ WRK 003';
+      }
+    }
+  }
+
+  .pac-container {
+    justify-content: space-around;
+    padding-left: 5%;
+    position: relative;
+
+    #pac-image {
+      width: 35vw;
+      height: 40vw;
+      position: relative;
+      margin-bottom: 5vw;
+      box-shadow: 1.3px 1.3px 6px rgb(0, 0, 0);
+      p {
+        position: absolute;
+        bottom: -30px;
+        left: 5px;
+        color: rgb(235, 232, 232);
+      }
+      &::after {
+        content: 'PRJ WRK 005';
+        display: block;
+        color: rgb(235, 232, 232);
+        position: absolute;
+        right: -70px;
+        bottom: 55px;
+        transform: rotate(90deg);
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    #proj-text {
+      width: 50%;
+      h1 {
+        font-size: 6.3vmax;
+        color: rgb(238, 238, 238);
+        font-family: 'Press Start 2P', cursive;
+      }
+      p {
+        width: 80%;
+      }
+      ul {
+        columns: 1;
+      }
+    }
+  }
+
+  h6 {
+    text-align: center;
+    font-size: 4vw;
+    margin-bottom: 15vw;
+    color: rgb(150, 148, 148);
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: -6vw 0 5vw 0;
+    font-family: 'raleway';
+    div {
+      background: transparent;
+      width: 85%;
+
+      p {
+        color: white;
+        font-size: 6vw;
+        line-height: 7.5vw;
+        &:nth-of-type(1) {
+          padding-left: 22%;
+        }
+      }
+
+      input {
+        width: 35%;
+        background: transparent;
+        user-select: none;
+        outline: none;
+        border: none;
+        border-bottom: 1px grey solid;
+        font-size: 3vw;
+        color: lightsalmon;
+        font-family: 'raleway';
+
+        &:focus {
+          border-bottom: 1px lightsalmon solid;
+        }
+        &:valid {
+          border: none;
+        }
+      }
+    }
+
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%;
+      margin-top: 3vw;
+      #socials {
+        width: 30%;
+        display: flex;
+        height: 80%;
+        justify-content: space-between;
+        div {
+          display: flex;
+          flex-direction: column;
+          width: 30%;
+          a {
+            font-size: 2.2vmax;
+            color: pink;
+            &:hover {
+              text-decoration: line-through;
+              font-style: italic;
+            }
+          }
+        }
+        h1 {
+          font-size: 2.6vmax;
+          color: white;
+        }
+      }
+      button {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: lightsalmon;
+        border: none;
+        color: white;
+        font-size: 22px;
+        font-family: 'raleway';
+        font-weight: bold;
+        transition: 0.25s ease-out;
+        user-select: none;
+        outline: none;
+
+        &:hover {
+          transform: scale(0.91);
+          cursor: pointer;
+        }
+
+        @keyframes bounce {
+          0% {
+            transform: scale(1.05);
+          }
+          100% {
+            transform: scale(0.95);
+          }
+        }
+      }
+    }
+  }
+}
+#trek-image {
+  cursor: pointer;
+}
+.modal-content {
+  background-color: red;
+  height: 90vh;
+  width: 90vw;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media only screen and(max-width: 800px) {
+  svg {
+    display: none;
+  }
+  .arrow {
+    display: none;
+  }
+  #count {
+    font-size: 95px !important;
+    transform: translateY(-12px) !important;
+  }
+  #para {
+    small {
+      font-size: 4vw !important;
+    }
+  }
+  .content {
+    nav {
+      width: 90% !important;
+      left: -1% !important;
+      top: 5% !important;
+    }
+
+    section {
+      height: 93% !important;
+      p {
+        margin-bottom: -4vw !important;
+        font-size: 11.1vw !important;
+        span {
+          font-size: 11.4vw !important;
+        }
+      }
+    }
+  }
+
+  .text-slider {
+    margin: 0 !important;
+    span {
+      font-size: 120px !important;
+    }
+  }
+  .honne-container,
+  .fin-container,
+  .pac-container,
+  .kap-container,
+  .trek-container {
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 0% !important;
+
+    #proj-text {
+      width: 80% !important;
+      margin: 8vw 0 15vw 0 !important;
+      transform: translate(0) !important;
+      h1 {
+        margin: 0 0 3vw 0 !important;
+        text-align: center;
+        font-size: 12vw !important;
+      }
+      ul {
+        width: 100% !important;
+      }
+      p {
+        width: 100% !important;
+      }
+      ion-icon {
+        margin: -0.8vw 2vw 0 0 !important;
+      }
+      &::before {
+        display: none !important;
+      }
+    }
+
+    #honne-image {
+      width: 250px !important;
+      height: 570px !important;
+      margin-bottom: 20px !important;
+    }
+
+    #fin-image,
+    #kap-image,
+    #trek-image {
+      width: 85vw !important;
+      height: 45vw !important;
+      &::before {
+        display: none !important;
+      }
+    }
+
+    img {
+      display: block !important;
+      width: 86vw;
+      height: 45vw;
+      margin-top: 15px;
+      box-shadow: 1.3px 1.3px 6px rgb(0, 0, 0);
+    }
+
+    #pac-image {
+      width: 80vw !important;
+      height: 93vw !important;
+    }
+  }
+
+  .honne-container {
+    flex-direction: column-reverse !important;
+  }
+
+  .kap-container,
+  .trek-container {
+    #proj-text {
+      transform: translate(0) !important;
+      align-self: center !important;
+    }
+  }
+
+  .pac-container {
+    #proj-text {
+      margin-bottom: 10vw !important;
+      h1 {
+        text-align: center;
+        font-size: 8.5vw !important;
+      }
+    }
+  }
+
+  form {
+    padding-left: 3.5%;
+    p {
+      line-height: 8.3vw !important;
+      &:nth-of-type(1) {
+        padding-left: 0 !important;
+      }
+    }
+    input {
+      width: 90% !important;
+      font-size: 4.5vw !important;
+    }
+    button {
+      width: 115px !important;
+      height: 115px !important;
+      font-size: 16px !important;
+    }
+
+    #socials {
+      flex-direction: column !important;
+    }
+  }
+}
