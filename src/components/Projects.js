@@ -158,7 +158,7 @@ const Projects = () => {
           data-aos-offset='300'
           data-aos-duration='800'
           data-aos-easing='ease'
-          src='https://i.imgur.com/NyOmmN7.png'
+          src='./pf_pic2.png'
           alt=''
         />
 
@@ -240,7 +240,7 @@ const Projects = () => {
           data-aos-offset='300'
           data-aos-duration='800'
           data-aos-easing='ease'
-          src='https://i.imgur.com/8jmRsRA.png'
+          src='./ai_pic2.png'
           alt=''
         />
 
@@ -376,7 +376,7 @@ const Projects = () => {
           data-aos-offset='300'
           data-aos-duration='800'
           data-aos-easing='ease'
-          src='https://i.imgur.com/MYtlWlw.png'
+          src='./fa_pic2.png'
           alt=''
         />
         <div
